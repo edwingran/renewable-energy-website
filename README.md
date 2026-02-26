@@ -54,26 +54,29 @@ Brindar una experiencia web clara, visual y didáctica para:
 
 ```text
 energias-renovables/
+├── index.html                 # Página principal (raíz)
 ├── css/
-│   └── estilos.css
+│   └── estilos.css           # Estilos del sitio
 ├── datos/
-│   ├── datos_energia_global.csv
-│   └── datos_energia_sa.csv
+│   ├── datos_energia_global.csv  # Datos mundiales
+│   └── datos_energia_sa.csv      # Datos Sur América
 ├── html/
-│   ├── index.html
-│   ├── historia.html
-│   ├── tipos-energias.html
-│   ├── colombia.html
-│   ├── contactos.html
-│   ├── calculos.html
-│   ├── calculadora.html
-│   └── dashboard.html
+│   ├── historia.html         # Historia de energías renovables
+│   ├── tipos-energias.html   # Tipos de energías
+│   ├── colombia.html        # Contexto colombiano
+│   ├── contactos.html       # Formulario de contacto
+│   ├── calculos.html        # Hub de herramientas
+│   ├── calculadora.html     # Calculadora energética
+│   └── dashboard.html       # Visualización de datos
 ├── img/
+│   ├── favicon.png
+│   ├── logo-energias.png
+│   ├── logo-talento-tech.png
+│   └── [imágenes de contenido]
 └── js/
-    ├── script.js
-    ├── script copy.js
-    ├── calculadora.js
-    └── graficas.js
+    ├── script.js            # Scripts principales
+    ├── calculadora.js       # Lógica calculadora
+    └── graficas.js          # Gráficas con Chart.js
 ```
 
 ## 🚀 Cómo ejecutar el proyecto
@@ -81,7 +84,7 @@ energias-renovables/
 1. Clona o descarga este repositorio.
 2. Abre la carpeta del proyecto en tu editor.
 3. Ejecuta un servidor local (recomendado) para evitar problemas de rutas al consumir datos.
-4. Abre `html/index.html` desde el navegador.
+4. Abre `index.html` desde el navegador (está en la raíz).
 
 > También puedes abrir el archivo directamente, pero para las funciones con `fetch` y carga de CSV se recomienda servidor local.
 

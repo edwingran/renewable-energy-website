@@ -1209,10 +1209,16 @@ body {
   .newsletter-form .input-group {
     flex-direction: column;
   }
+
+  .newsletter-form .form-control {
+    width: 100%;
+    border-radius: 8px !important;
+  }
   
   .btn-newsletter {
     width: 100%;
     margin-top: 0.5rem;
+    border-radius: 8px !important;
   }
 }
 
@@ -1766,7 +1772,7 @@ body {
 }
 
 .map-container {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
@@ -1854,7 +1860,7 @@ body {
 
 .colombia-energy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -2122,6 +2128,7 @@ body {
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem;
 }
 
 .investment-highlights {
