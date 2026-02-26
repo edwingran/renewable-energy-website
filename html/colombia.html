@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energías Renovables en Colombia - Potencia Verde Nacional</title>
+    <meta name="description" content="Descubre el avance de las energías renovables en Colombia. Proyectos solares, eólicos, hidroeléctricos y el futuro energético sostenible del país.">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navegación Moderna -->
+    <header class="header-moderno">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="/img/logo-energias.png" alt="Logo Energías Renovables" height="35">
+            <span class="brand-text">Energías Renovables</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historia.html">Historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tipos-energias.html">Tipos de Energía</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="colombia.html">Colombia</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Herramientas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="calculos.html">Herramientas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="calculadora.html">Calculadora</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactos.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="tools-hero tools-hero--colombia">
+      <div class="container">
+        <div class="tools-hero-content">
+          <p class="tools-kicker">Colombia</p>
+          <h1 class="tools-title">Colombia y la transición energética</h1>
+          <p class="tools-subtitle">Panorama, proyectos y oportunidades para acelerar el cambio hacia energías renovables.</p>
+          <div class="tools-hero-actions">
+            <a class="btn btn-hero" href="#overview">Explorar el avance</a>
+          </div>
+        </div>
+      </div>
+      <div class="tools-hero-overlay"></div>
+    </section>
+
+    <!-- Introducción Colombia -->
+    <section id="intro" class="intro-section">
+      <div class="container">
+        <div class="intro-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="intro-content">
+                <h2 class="section-title">Potencial Renovable Ilimitado</h2>
+                <div class="intro-text">
+                  <p>Colombia está en un momento crucial de su historia energética. Con una geografía privilegiada que ofrece sol abundante, vientos constantes en la Guajira, caudales hídricos impresionantes y biomasa diversa, nuestro país tiene el potencial de convertirse en una potencia energética renovable.</p>
+                  <p>El gobierno nacional ha establecido metas ambiciosas: alcanzar 1.500 MW de capacidad renovable no convencional para 2022 y 3.000 MW para 2030, marcando el inicio de una nueva era energética para Colombia.</p>
+                  <div class="stats-row">
+                    <div class="stat-item">
+                      <div class="stat-number">30%</div>
+                      <div class="stat-label">Energía renovable actual</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-number">3.000</div>
+                      <div class="stat-label">MW objetivo 2030</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-number">50+</div>
+                      <div class="stat-label">Proyectos en desarrollo</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="intro-image">
+                <img src="/img/colombia-situacion.jpg" alt="Situación energética en Colombia" class="img-fluid">
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mapa de Proyectos -->
+    <section id="overview" class="projects-map-section">
+      <div class="container">
+        <h2 class="section-title text-center">Proyectos Renovables en Colombia</h2>
+        <div class="map-container">
+          <div class="map-visual">
+            <img src="/img/colombia-map.jpg" alt="Mapa de proyectos renovables en Colombia" class="img-fluid">
+            <div class="map-points">
+              <!-- Puntos de proyectos -->
+              <div class="project-point guajira" data-project="guajira">
+                <div class="point-marker"></div>
+                <div class="point-info">La Guajira: Parque Eólico</div>
+              </div>
+              <div class="project-point atlantico" data-project="atlantico">
+                <div class="point-marker"></div>
+                <div class="point-info">Atlántico: Solar Industrial</div>
+              </div>
+              <div class="project-point cesar" data-project="cesar">
+                <div class="point-marker"></div>
+                <div class="point-info">Cesar: Parque Solar</div>
+              </div>
+              <div class="project-point valle" data-project="valle">
+                <div class="point-marker"></div>
+                <div class="point-info">Valle: Biomasa</div>
+              </div>
+              <div class="project-point antioquia" data-project="antioquia">
+                <div class="point-marker"></div>
+                <div class="point-info">Antioquia: Mini-hidro</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de Energía en Colombia -->
+    <section class="colombia-energy-types">
+      <div class="container">
+        <h2 class="section-title text-center">Energías Renovables en Nuestro Territorio</h2>
+        <div class="colombia-energy-grid">
+          
+          <!-- Energía Solar -->
+          <div class="colombia-energy-card solar-col">
+            <div class="colombia-energy-header">
+              <div class="energy-icon">☀️</div>
+              <h3>Energía Solar</h3>
+              <div class="region-badge">Región Caribe y Andina</div>
+            </div>
+            <div class="colombia-energy-content">
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">800+</span>
+                  <span class="stat-label">MW en construcción</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">4.5</span>
+                  <span class="stat-label">kWh/m²/día radiación</span>
+                </div>
+              </div>
+              <div class="projects-list">
+                <h4>Proyectos Destacados</h4>
+                <ul>
+                  <li><strong>Parque Solar Cesar:</strong> 200 MW</li>
+                  <li><strong>Solar Atlántico:</strong> 150 MW</li>
+                  <li><strong>Proyectos Valle del Cauca:</strong> 100 MW</li>
+                </ul>
+              </div>
+              <div class="potential-info">
+                <p>Con una de las mejores radiaciones solares de América Latina, Colombia tiene potencial para más de 18 GW de energía solar.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Energía Eólica -->
+          <div class="colombia-energy-card wind-col">
+            <div class="colombia-energy-header">
+              <div class="energy-icon">💨</div>
+              <h3>Energía Eólica</h3>
+              <div class="region-badge">La Guajira</div>
+            </div>
+            <div class="colombia-energy-content">
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">MW en desarrollo</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">9</span>
+                  <span class="stat-label">m/s velocidad promedio</span>
+                </div>
+              </div>
+              <div class="projects-list">
+                <h4>Proyectos Destacados</h4>
+                <ul>
+                  <li><strong>Parque Eólico Guajira:</strong> 200 MW</li>
+                  <li><strong>Proyecto Wayuu:</strong> 150 MW</li>
+                  <li><strong>Parque Eólico Maicao:</strong> 100 MW</li>
+                </ul>
+              </div>
+              <div class="potential-info">
+                <p>La Guajira tiene potencial para más de 21 GW de energía eólica, convirtiéndola en el corredor eólico más importante de América Latina.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Energía Hidroeléctrica -->
+          <div class="colombia-energy-card hydro-col">
+            <div class="colombia-energy-header">
+              <div class="energy-icon">💧</div>
+              <h3>Energía Hidroeléctrica</h3>
+              <div class="region-badge">Todo el país</div>
+            </div>
+            <div class="colombia-energy-content">
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">12.000</span>
+                  <span class="stat-label">MW instalados</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">70%</span>
+                  <span class="stat-label">de la matriz energética</span>
+                </div>
+              </div>
+              <div class="projects-list">
+                <h4>Proyectos Destacados</h4>
+                <ul>
+                  <li><strong>Hidroituango:</strong> 2.400 MW</li>
+                  <li><strong>El Quimbo:</strong> 500 MW</li>
+                  <li><strong>Sogamoso:</strong> 820 MW</li>
+                </ul>
+              </div>
+              <div class="potential-info">
+                <p>Colombia tiene potencial hidroeléctrico estimado en 93 GW, con solo el 13% desarrollado actualmente.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Biomasa -->
+          <div class="colombia-energy-card biomass-col">
+            <div class="colombia-energy-header">
+              <div class="energy-icon">🌱</div>
+              <h3>Biomasa y Biogás</h3>
+              <div class="region-badge">Zonas agrícolas</div>
+            </div>
+            <div class="colombia-energy-content">
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">300+</span>
+                  <span class="stat-label">MW potencial</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">16</span>
+                  <span class="stat-label">millones ton/año residuos</span>
+                </div>
+              </div>
+              <div class="projects-list">
+                <h4>Proyectos Destacados</h4>
+                <ul>
+                  <li><strong>Biogás Palma de Aceite:</strong> 50 MW</li>
+                  <li><strong>Biomasa Caña:</strong> 30 MW</li>
+                  <li><strong>Biogás Pecuario:</strong> 20 MW</li>
+                </ul>
+              </div>
+              <div class="potential-info">
+                <p>Con la agricultura y ganadería diversa, Colombia tiene gran potencial para biomasa y biogás en todo el territorio.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Políticas y Metas -->
+    <section class="policies-section">
+      <div class="container">
+        <h2 class="section-title text-center">Políticas y Metas Nacionales</h2>
+        <div class="policies-grid">
+          <div class="policy-card">
+            <div class="policy-icon">🎯</div>
+            <h3>Meta 2030</h3>
+            <p>3.000 MW de capacidad renovable no convencional instalada</p>
+            <div class="policy-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+              <span class="progress-text">25% completado</span>
+            </div>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon">📊</div>
+            <h3>Ley 1715 de 2014</h3>
+            <p>Marco legal para promoción de generación de energía a partir de fuentes renovables</p>
+            <div class="policy-features">
+              <span class="feature-tag">Incentivos fiscales</span>
+              <span class="feature-tag">Bonificación</span>
+              <span class="feature-tag">Régimen especial</span>
+            </div>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon">⚡</div>
+            <h3>Subastas Renovables</h3>
+            <p>Proceso competitivo para asignar proyectos de energía renovable</p>
+            <div class="policy-stats">
+              <div class="mini-stat">
+                <span class="number">2.200</span>
+                <span class="label">MW adjudicados</span>
+              </div>
+              <div class="mini-stat">
+                <span class="number">$0.04</span>
+                <span class="label">USD/kWh promedio</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon">🌍</div>
+            <h3>Compromiso Climático</h3>
+            <p>Colombia se compromete a reducir emisiones en 51% para 2030</p>
+            <div class="policy-impact">
+              <div class="impact-item">
+                <span class="impact-icon">🌱</span>
+                <span class="impact-text">Carbono neutralidad 2050</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-icon">🔋</span>
+                <span class="impact-text">Energía limpia 70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inversiones y Finanzas -->
+    <section class="investment-section">
+      <div class="container">
+        <div class="investment-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="investment-content">
+                <h2 class="section-title">Inversión y Financiamiento</h2>
+                <p>Colombia se ha posicionado como un destino atractivo para la inversión en energías renovables, con más de $6.000 millones de dólares comprometidos en proyectos en desarrollo.</p>
+                <div class="investment-highlights">
+                  <div class="highlight-item">
+                    <div class="highlight-icon">💰</div>
+                    <div class="highlight-content">
+                      <h4>$6.000M</h4>
+                      <p>Inversión comprometida</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">🏦</div>
+                    <div class="highlight-content">
+                      <h4>Financiamiento</h4>
+                      <p>Bancos internacionales y locales</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">🤝</div>
+                    <div class="highlight-content">
+                      <h4>Alianzas</h4>
+                      <p>Colaboración público-privada</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="investment-visual">
+                <div class="investment-chart">
+                  <div class="chart-item">
+                    <div class="chart-label">Solar</div>
+                    <div class="chart-bar">
+                      <div class="bar-fill" style="width: 35%"></div>
+                      <span class="bar-value">35%</span>
+                    </div>
+                  </div>
+                  <div class="chart-item">
+                    <div class="chart-label">Eólica</div>
+                    <div class="chart-bar">
+                      <div class="bar-fill" style="width: 30%"></div>
+                      <span class="bar-value">30%</span>
+                    </div>
+                  </div>
+                  <div class="chart-item">
+                    <div class="chart-label">Hidroeléctrica</div>
+                    <div class="chart-bar">
+                      <div class="bar-fill" style="width: 25%"></div>
+                      <span class="bar-value">25%</span>
+                    </div>
+                  </div>
+                  <div class="chart-item">
+                    <div class="chart-label">Biomasa</div>
+                    <div class="chart-bar">
+                      <div class="bar-fill" style="width: 10%"></div>
+                      <span class="bar-value">10%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Sociales y Económicos -->
+    <section class="benefits-section">
+      <div class="container">
+        <h2 class="section-title text-center">Impacto Social y Económico</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">👷</div>
+            <h3>Empleo Verde</h3>
+            <p>Creación de más de 50.000 empleos directos e indirectos en el sector renovable</p>
+            <div class="benefit-stat">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Empleos generados</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🏘️</div>
+            <h3>Desarrollo Regional</h3>
+            <p>Impulso económico en zonas rurales con proyectos de energía renovable</p>
+            <div class="benefit-stat">
+              <span class="stat-number">15</span>
+              <span class="stat-label">Departamentos beneficiados</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">💡</div>
+            <h3>Energía Accesible</h3>
+            <p>Reducción de costos y mayor acceso a energía en zonas no interconectadas</p>
+            <div class="benefit-stat">
+              <span class="stat-number">52%</span>
+              <span class="stat-label">Reducción en costos</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🌿</div>
+            <h3>Sostenibilidad</h3>
+            <p>Protección del medio ambiente y reducción de huella de carbono nacional</p>
+            <div class="benefit-stat">
+              <span class="stat-number">10M</span>
+              <span class="stat-label">Toneladas CO₂ evitadas/año</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Futuro de Colombia Renovable -->
+    <section class="future-section">
+      <div class="container">
+        <div class="future-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="future-content">
+                <h2 class="section-title">El Futuro Energético de Colombia</h2>
+                <p>Colombia está en el umbral de convertirse en líder energético de América Latina. Con recursos naturales excepcionales, políticas favorables y creciente interés internacional, el país tiene todo para liderar la transición energética regional.</p>
+                <p>Los próximos años serán cruciales: con la implementación de proyectos masivos, el desarrollo de tecnología local y la consolidación de un mercado renovable competitivo, Colombia puede alcanzar no solo sus metas energéticas sino convertirse en un exportador de energía limpia y conocimiento renovable.</p>
+                <div class="future-stats">
+                  <div class="future-stat">
+                    <div class="stat-number">2030</div>
+                    <div class="stat-label">Líder regional en renovables</div>
+                  </div>
+                  <div class="future-stat">
+                    <div class="stat-number">2050</div>
+                    <div class="stat-label">Energía 100% limpia</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="future-image">
+                <img src="/img/futuro-colombia-renovable.jpg" alt="Futuro de las energías renovables en Colombia" class="img-fluid">
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Profesional Moderno -->
+    <footer class="footer-moderno">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Sobre Nosotros -->
+            <div class="footer-column">
+              <h4 class="footer-title">Energías Renovables</h4>
+              <p class="footer-description">
+                Promovemos un futuro sostenible a través de la educación y difusión de energías limpias. 
+                Transformamos el conocimiento en acción para un planeta más verde.
+              </p>
+              <div class="footer-logo">
+                <img src="/img/logo-talento-tech.png" alt="Talento Tech" class="talento-logo">
+                <span>Formados por Talento Tech</span>
+              </div>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="footer-column">
+              <h4 class="footer-title">Explorar</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="tipos-energias.html">Tipos de Energía</a></li>
+                <li><a href="colombia.html">Colombia</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+              </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-column">
+              <h4 class="footer-title">Contacto</h4>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <span class="contact-icon">📧</span>
+                  <a href="mailto:contacto@energiasverdes.com">contacto@energiasverdes.com</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <a href="tel:3216137249">321-6137249</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <a href="tel:3137332454">313-7332454</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <span>Pereira - Medellín</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column">
+              <h4 class="footer-title">Mantente Informado</h4>
+              <p class="footer-description">
+                Suscríbete para recibir las últimas noticias y actualizaciones sobre energías renovables.
+              </p>
+              <form class="newsletter-form" id="newsletterForm">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                  <button type="submit" class="btn btn-newsletter">
+                    <span>Suscribir</span>
+                  </button>
+                </div>
+              </form>
+              <div class="social-links">
+                <a href="#" title="Facebook" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="#" title="Twitter" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </a>
+                <a href="#" title="LinkedIn" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-content">
+            <p>&copy; 2024 Energías Renovables. Todos los derechos reservados.</p>
+            <p class="footer-slogan">Construyendo un futuro más verde, hoy.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+      // Smooth scroll para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Interacción con puntos del mapa
+      document.querySelectorAll('.project-point').forEach(point => {
+        point.addEventListener('click', function() {
+          const info = this.querySelector('.point-info');
+          // Toggle visibility
+          info.style.display = info.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+
+      // Animación de barras de progreso al scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll('.progress-fill, .bar-fill');
+            progressBars.forEach(bar => {
+              const width = bar.style.width;
+              bar.style.width = '0';
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 100);
+            });
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.policy-card, .investment-chart').forEach(element => {
+        observer.observe(element);
+      });
+
+      // Newsletter form
+      document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        if (email) {
+          alert('¡Gracias por suscribirte! Pronto recibirás nuestras noticias.');
+          this.reset();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora - Energías Renovables</title>
+    <meta name="description" content="Calcula indicadores y equivalencias de energía renovable usando datos reales por país.">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header-moderno">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="/img/logo-energias.png" alt="Logo Energías Renovables" height="35">
+            <span class="brand-text">Energías Renovables</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+              <li class="nav-item"><a class="nav-link" href="tipos-energias.html">Tipos de Energía</a></li>
+              <li class="nav-item"><a class="nav-link" href="colombia.html">Colombia</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Herramientas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="calculos.html">Herramientas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="calculadora.html">Calculadora</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="tools-hero">
+      <div class="container">
+        <div class="tools-hero-content">
+          <p class="tools-kicker">Herramienta interactiva</p>
+          <h1 class="tools-title">Calculadora de Energía Renovable</h1>
+          <p class="tools-subtitle">Usa datos reales de capacidad (MW) por país y estima equivalencias para tu consumo.</p>
+          <div class="tools-hero-actions">
+            <a class="btn btn-hero" href="dashboard.html">Ver Dashboard</a>
+            <a class="btn btn-hero-outline" href="calculos.html">Volver a Herramientas</a>
+          </div>
+        </div>
+      </div>
+      <div class="tools-hero-overlay"></div>
+    </section>
+
+    <main class="tools-main">
+      <section class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="tool-card">
+              <h2 class="section-title mb-3">Ingresa tus datos</h2>
+              <p class="text-muted mb-4">Selecciona el conjunto de datos y un país. Luego indica tu consumo mensual para obtener equivalencias.</p>
+
+              <form id="calculadoraForm" class="tool-form" novalidate>
+                <div class="mb-3">
+                  <label for="dataset" class="form-label">Conjunto de datos</label>
+                  <select id="dataset" class="form-select" required>
+                    <option value="" selected disabled>Selecciona…</option>
+                    <option value="sa">Sur América</option>
+                    <option value="global">Global</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="pais" class="form-label">País</label>
+                  <select id="pais" class="form-select" required disabled>
+                    <option value="" selected disabled>Primero selecciona un conjunto…</option>
+                  </select>
+                  <div class="form-text">Los valores provienen de los CSV en la carpeta <code>datos</code>.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="consumoTotal" class="form-label">Consumo mensual (kWh)</label>
+                  <input id="consumoTotal" type="number" class="form-control" min="1" step="1" placeholder="Ej: 180" required>
+                </div>
+
+                <button type="submit" class="btn btn-hero w-100">Calcular</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div id="resultados" class="tool-card tool-results hidden" aria-live="polite">
+              <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+                <div>
+                  <h2 class="section-title mb-1">Resultados</h2>
+                  <p class="text-muted mb-0">Interpretación rápida basada en el país y tu consumo.</p>
+                </div>
+                <div class="tool-badge">
+                  <span id="paisSeleccionado">—</span>
+                </div>
+              </div>
+
+              <div class="results-grid mt-4">
+                <div class="result-stat">
+                  <div class="result-label">Participación estimada</div>
+                  <div class="result-value" id="porcentajeValor">0%</div>
+                  <div class="result-hint">Consumo (kWh/mes) vs capacidad del país (MW)</div>
+                </div>
+                <div class="result-stat">
+                  <div class="result-label">Capacidad país</div>
+                  <div class="result-value" id="capacidadPais">0 MW</div>
+                  <div class="result-hint">Desde el CSV seleccionado</div>
+                </div>
+              </div>
+
+              <div class="results-split mt-4">
+                <div class="circle-wrap" aria-hidden="true">
+                  <div id="porcentajeCirculo" class="circle"></div>
+                </div>
+
+                <div class="breakdown">
+                  <h3 class="breakdown-title">Distribución referencial</h3>
+                  <p class="text-muted mb-3">Una aproximación visual para entender la mezcla renovable (referencial).</p>
+
+                  <div class="breakdown-row">
+                    <span>Solar</span>
+                    <strong><span id="energiaSolar">0</span>%</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Eólica</span>
+                    <strong><span id="energiaEolica">0</span>%</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Hidro</span>
+                    <strong><span id="energiaHidro">0</span>%</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>No renovable</span>
+                    <strong><span id="energiaNoRenovable">0</span>%</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recommendation mt-4">
+                <h3 class="recommendation-title">Recomendación</h3>
+                <p id="recomendacion" class="mb-0">—</p>
+              </div>
+            </div>
+
+            <div class="tool-card mt-4">
+              <h2 class="section-title mb-3">¿De dónde salen los datos?</h2>
+              <p class="text-muted mb-0">Esta calculadora lee archivos CSV desde <code>/datos</code> usando <code>fetch</code>. Si ejecutas el proyecto como archivos sueltos (doble click), algunos navegadores bloquean <code>fetch</code>. Lo ideal es abrirlo con un servidor local.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-moderno">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <h4 class="footer-title">Energías Renovables</h4>
+              <p class="footer-description">
+                Promovemos un futuro sostenible a través de la educación y difusión de energías limpias. 
+                Transformamos el conocimiento en acción para un planeta más verde.
+              </p>
+              <div class="footer-logo">
+                <img src="/img/logo-talento-tech.png" alt="Talento Tech" class="talento-logo">
+                <span>Formados por Talento Tech</span>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="footer-title">Explorar</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="tipos-energias.html">Tipos de Energía</a></li>
+                <li><a href="colombia.html">Colombia</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="footer-title">Contacto</h4>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <span class="contact-icon">📧</span>
+                  <a href="mailto:contacto@energiasverdes.com">contacto@energiasverdes.com</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <a href="tel:3216137249">321-6137249</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <a href="tel:3137332454">313-7332454</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <span>Pereira - Medellín</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="footer-title">Mantente Informado</h4>
+              <p class="footer-description">
+                Suscríbete para recibir las últimas noticias y actualizaciones sobre energías renovables.
+              </p>
+              <form class="newsletter-form" id="newsletterForm">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                  <button type="submit" class="btn btn-newsletter">
+                    <span>Suscribir</span>
+                  </button>
+                </div>
+              </form>
+              <div class="social-links">
+                <a href="#" title="Facebook" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="#" title="Twitter" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </a>
+                <a href="#" title="LinkedIn" class="social-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-content">
+            <p>&copy; 2024 Energías Renovables. Todos los derechos reservados.</p>
+            <p class="footer-slogan">Construyendo un futuro más verde, hoy.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="/js/calculadora.js"></script>
+  </body>
+</html>

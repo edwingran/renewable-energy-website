@@ -1,0 +1,19 @@
+URL BOOTSTRAP
+
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+
+Diseño web con Bootstrap 5
+
+https://www.youtube.com/watch?v=Za0TdyMcjis
+
+adaptación de tamaño de las fotos a la página
+
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* Ajusta según el tamaño deseado */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+  }
+  
+DATOS DE ENERGÍAS - BIBLIOGRAFÍA
+https://datosmacro.expansion.com/energia-y-medio-ambiente/electricidad-generacion
